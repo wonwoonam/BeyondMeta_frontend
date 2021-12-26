@@ -12,6 +12,8 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+   
+
     "updates": {
       "fallbackToCacheTimeout": 0
     },
@@ -19,7 +21,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.piccle.piccle"
     },
     "android": {
       "adaptiveIcon": {

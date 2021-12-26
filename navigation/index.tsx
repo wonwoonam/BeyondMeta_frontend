@@ -8,10 +8,20 @@ import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 import { ColorSchemeName } from 'react-native';
 
+
 import NotFoundScreen from '../screens/NotFoundScreen';
 import { RootStackParamList } from '../types';
 import BottomTabNavigator from './BottomTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
+
+import SendTokenNavigator from './SendToken/SendTokenNavigator'
+import SellTokenNavigator from './SellToken/Navigator'
+
+import DetailNavigator from './ArtDetail/Navigator'
+import PurchaseNavigator from './Purchase/Navigator';
+
+import LoginScreen from './Login/Page'
+
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -32,6 +42,11 @@ function RootNavigator() {
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Root" component={BottomTabNavigator} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
+      <Stack.Screen name="SendTokenPage" component={SendTokenNavigator}/>
+      <Stack.Screen name="SellingOwnedTokenPage" component={SellTokenNavigator}/>
+      <Stack.Screen name="DetailPage" component={DetailNavigator}/>
+      <Stack.Screen name="PurchasePage" component={PurchaseNavigator}/>
+      
     </Stack.Navigator>
   );
 }
